@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ERP (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ERP (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
