@@ -26,6 +26,18 @@ namespace ERP
         public MainWindow()
         {
             this.InitializeComponent();
+            appNavigation.SelectedItem = appNavigation.MenuItems[0]; // Select the first menu item by default
+            appNavigation.SelectionChanged += appNavigation_SelectionChanged;
+        }
+
+        private void appNavigation_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        {
+            if (args?.SelectedItem is NavigationViewItem selectedItem)
+            {
+                string pageName = selectedItem.Tag.ToString();
+                Type pageType = Type.GetType($"ERP.Views.{pageName}");
+                contentFrame.Navigate(pageType);
+            }
         }
     }
 }
