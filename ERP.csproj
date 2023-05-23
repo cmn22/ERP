@@ -16,6 +16,7 @@
     <None Remove="Components\LargeButton.xaml" />
     <None Remove="Components\ResultCount.xaml" />
     <None Remove="Components\SearchButton.xaml" />
+    <None Remove="Views\Suppliers.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -59,6 +60,11 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Components\SearchButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Suppliers.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
