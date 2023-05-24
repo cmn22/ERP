@@ -14,6 +14,7 @@
   <ItemGroup>
     <None Remove="Components\CompactButton.xaml" />
     <None Remove="Components\LargeButton.xaml" />
+    <None Remove="Components\NavigationGrouper.xaml" />
     <None Remove="Components\ResultCount.xaml" />
     <None Remove="Components\SearchButton.xaml" />
     <None Remove="Views\Suppliers.xaml" />
@@ -42,6 +43,11 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Components\NavigationGrouper.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Components\LargeButton.xaml">
