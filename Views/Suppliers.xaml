@@ -1,4 +1,4 @@
-<Page
+ï»¿<Page
     x:Class="ERP.Views.Suppliers"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -10,54 +10,87 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <components:SearchButton x:Name="searchButton" Label="Suchen" />
+        <StackPanel
+            x:Name="suppliersViewNavigationPanel"
+            Orientation="Horizontal"
+            Padding="0,5"
+        >
+            <!--Search-->
+            <components:SearchButton
+                x:Name="searchButton"
+                Label="Suchen"
+            />
             <AppBarSeparator />
+
+            <!--Result-->
             <components:ResultCount />
             <AppBarSeparator />
-            <StackPanel
-                Orientation="Vertical"
-                VerticalAlignment="Center"
+
+            <!-- -->
+            <components:NavigationGrouper
+                x:Name="editingGroup"
+                Label="Bearbeitung"
             >
-                <components:CompactButton
-                    x:Name="addButton"
-                    Icon="Add"
-                    Label="Hinzufügen"
-                />
-                <components:CompactButton
-                    x:Name="editButton"
-                    Icon="Edit"
-                    Label="Bearbeiten"
-                />
-                <components:CompactButton
-                    Icon="Delete"
-                    Label="Löschen"
-                />
-                <components:CompactButton
-                    x:Name="deleteFieldsButton"
-                    Icon="Cancel"
-                    Label="Felder löschen"
-                />
-                <TextBlock
-                    x:Name="editingGroupLabel"
-                    HorizontalAlignment="Center"
-                    Margin="0,5,0,0"
-                    FontSize="10"
-                    Text="Bearbeitung" 
-                />
-            </StackPanel>
+                <ContentPresenter>
+                    <StackPanel
+                        Orientation="Vertical"
+                        VerticalAlignment="Top"
+                    >
+                        <components:CompactButton
+                            x:Name="addButton"
+                            Icon="Add"
+                            Label="HinzufÃ¼gen"
+                        />
+                        <components:CompactButton
+                            x:Name="editButton"
+                            Icon="Edit"
+                            Label="Bearbeiten"
+                        />
+                        <components:CompactButton
+                            Icon="Delete"
+                            Label="LÃ¶schen"
+                        />
+                        <components:CompactButton
+                            x:Name="deleteFieldsButton"
+                            Icon="Cancel"
+                            Label="Felder lÃ¶schen"
+                        />
+                    </StackPanel>
+                </ContentPresenter>
+            </components:NavigationGrouper>
             <AppBarSeparator />
+
+            <!--Process-->
             <components:LargeButton
                 x:Name="processButton"
                 Icon="Page2"
-                Label="Vorgänge"
+                Label="VorgÃ¤nge"
             />
             <AppBarSeparator />
+
+            <!--Print-->
             <components:LargeButton
                 x:Name="printButton"
                 Icon="Print"
                 Label="Druck"
             />
+            <AppBarSeparator />
+
+            <!--Export-->
+            <components:NavigationGrouper
+                x:Name="exportGroup"
+                Label="Export"
+            >
+                <ContentPresenter VerticalAlignment="Top">
+                    <components:CompactButton
+                        x:Name="exportMasterDataButton"
+                        Icon="Import"
+                        Label="Stammdatenblatt in Word"
+                    />
+                </ContentPresenter>
+            </components:NavigationGrouper>
+            <AppBarSeparator />
+
         </StackPanel>
     </StackPanel>
 </Page>
