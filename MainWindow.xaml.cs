@@ -26,10 +26,13 @@ namespace ERP
         public MainWindow()
         {
             this.InitializeComponent();
-            appNavigation.SelectedItem = appNavigation.MenuItems[0]; // Select the first menu item by default
+
+            // Select the first menu item by default
+            appNavigation.SelectedItem = appNavigation.MenuItems[0];
             appNavigation.SelectionChanged += appNavigation_SelectionChanged;
         }
 
+        //Function to call corresponding view based on the selection made via navigation bar
         private void appNavigation_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
             if (args?.SelectedItem is NavigationViewItem selectedItem)
