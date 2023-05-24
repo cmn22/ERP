@@ -17,6 +17,7 @@
     <None Remove="Components\NavigationGrouper.xaml" />
     <None Remove="Components\ResultCount.xaml" />
     <None Remove="Components\SearchButton.xaml" />
+    <None Remove="Views\Articles.xaml" />
     <None Remove="Views\Suppliers.xaml" />
   </ItemGroup>
 
@@ -46,6 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Components\NavigationGrouper.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Articles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

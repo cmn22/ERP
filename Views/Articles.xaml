@@ -1,0 +1,200 @@
+﻿<Page
+    x:Class="ERP.Views.Articles"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ERP.Views"
+    xmlns:components="using:ERP.Components"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <StackPanel
+            x:Name="articlesViewNavigationPanel"
+            Orientation="Horizontal"
+            Padding="0,5"
+        >
+            <!--Search-->
+            <components:SearchButton
+                x:Name="searchButton"
+                Label="Suchen"
+            />
+            <AppBarSeparator />
+
+            <!--Result-->
+            <components:ResultCount />
+            <AppBarSeparator />
+
+            <!--Editing-->
+            <components:NavigationGrouper
+                x:Name="editingGroup"
+                Label="Bearbeitung"
+            >
+                <ContentPresenter>
+                    <StackPanel
+                        Orientation="Vertical"
+                        VerticalAlignment="Top"
+                    >
+                        <components:CompactButton
+                            x:Name="addButton"
+                            Icon="Add"
+                            Label="Hinzufügen"
+                        />
+                        <components:CompactButton
+                            x:Name="editButton"
+                            Icon="Edit"
+                            Label="Bearbeiten"
+                        />
+                        <components:CompactButton
+                            Icon="Delete"
+                            Label="Löschen"
+                        />
+                        <components:CompactButton
+                            x:Name="deleteFieldsButton"
+                            Icon="Cancel"
+                            Label="Felder löschen"
+                        />
+                    </StackPanel>
+                </ContentPresenter>
+            </components:NavigationGrouper>
+            <AppBarSeparator />
+
+            <!--Stock Movement-->
+            <components:NavigationGrouper
+                x:Name="stockMovementGroup"
+                Label="Lagerbewegung"
+            >
+                <ContentPresenter>
+                    <StackPanel
+                        Orientation="Vertical"
+                        VerticalAlignment="Top"
+                    >
+                        <components:CompactButton
+                            x:Name="addArticlesReceiptButton"
+                            Icon="Add"
+                            Label="Wareneingang buchen"
+                        />
+                        <components:CompactButton
+                            x:Name="removeArticlesReceiptButton"
+                            Icon="Delete"
+                            Label="Entnahme"
+                        />
+                        <components:CompactButton
+                            x:Name="reserveArticlesButton"
+                            Icon="Cancel"
+                            Label="Reservierung"
+                        />
+                    </StackPanel>
+                </ContentPresenter>
+            </components:NavigationGrouper>
+            <AppBarSeparator />
+
+            <!--Articles-->
+            <components:NavigationGrouper
+                x:Name="articleGroup"
+                Label="Artikel"
+            >
+                <ContentPresenter>
+                    <StackPanel
+                        Orientation="Vertical"
+                        VerticalAlignment="Top"
+                    >
+                        <components:CompactButton
+                            x:Name="copyArticleButton"
+                            Icon="Copy"
+                            Label="Kopieren"
+                        />
+                        <components:CompactButton
+                            x:Name="assignNewNumberButton"
+                            Icon="Edit"
+                            Label="Neue Nr. Zuweisen"
+                        />
+                        <components:CompactButton
+                            x:Name="assignNewAreaButton"
+                            Icon="Edit"
+                            Label="Neuer Bereich Zuweise"
+                        />
+                        <components:CompactButton
+                            x:Name="deleteAreaButton"
+                            Icon="Delete"
+                            Label="Bereich Löschen"
+                        />
+                    </StackPanel>
+                </ContentPresenter>
+            </components:NavigationGrouper>
+            <AppBarSeparator />
+
+            <!--Print-->
+            <components:NavigationGrouper
+                x:Name="printGroup"
+                Label="Drucken"
+            >
+                <ContentPresenter>
+                    <components:LargeButton
+                        x:Name="printButton"
+                        Icon="Print"
+                        Label="Druck"
+                    />
+                </ContentPresenter>
+            </components:NavigationGrouper>
+            <AppBarSeparator />
+
+            <!--Export-->
+            <components:NavigationGrouper
+                x:Name="exportGroup"
+                Label="Export"
+            >
+                <ContentPresenter>
+                    <components:LargeButton
+                        x:Name="exportButton"
+                        Icon="Import"
+                        Label="Artikelstamm"
+                    />
+                </ContentPresenter>
+            </components:NavigationGrouper>
+            <AppBarSeparator />
+
+            <!--Import-->
+            <components:NavigationGrouper
+                x:Name="importGroup"
+                Label="Import"
+            >
+                <ContentPresenter>
+                    <components:LargeButton
+                        x:Name="importButton"
+                        Icon="Import"
+                        Label="Datanorm"
+                    />
+                </ContentPresenter>
+            </components:NavigationGrouper>
+            <AppBarSeparator />
+
+            <!--Adjustments-->
+            <components:NavigationGrouper
+                x:Name="adjustmentsGroup"
+                Label="Einstellungen"
+            >
+                <ContentPresenter>
+                    <StackPanel
+                        Orientation="Vertical"
+                        VerticalAlignment="Top"
+                    >
+                        <components:CompactButton
+                            x:Name="calculationFactorButton"
+                            Icon="Copy"
+                            Label="Kalkulationsfaktor"
+                        />
+                        <components:CompactButton
+                            x:Name="costCentersButton"
+                            Icon="Edit"
+                            Label="Kostenstellen"
+                        />
+                    </StackPanel>
+                </ContentPresenter>
+            </components:NavigationGrouper>
+            <AppBarSeparator />
+            
+        </StackPanel>
+    </StackPanel>
+</Page>
