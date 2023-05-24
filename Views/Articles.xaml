@@ -1,4 +1,6 @@
-﻿<Page
+﻿<!--View for Articles Page-->
+<!--Artikelverwaltung-->
+<Page
     x:Class="ERP.Views.Articles"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

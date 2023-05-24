@@ -1,3 +1,4 @@
+<!--Button with icon and text aligned vertically-->
 <UserControl
     x:Class="ERP.Components.LargeButton"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"

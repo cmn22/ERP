@@ -1,6 +1,5 @@
-<!-- Copyright (c) Microsoft Corporation and Contributors. -->
-<!-- Licensed under the MIT License. -->
-
+<!--Component to display a group inside the navigation menu bar-->
+<!--Renders content to be rendered inside each group along with the group label-->
 <UserControl
     x:Class="ERP.Components.NavigationGrouper"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -16,7 +15,8 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <ContentPresenter Content="{Binding Content}"/>
+        <!--Render the component received inside the ContentPresenter tag-->
+        <ContentPresenter Content="{x:Bind Content}"/>
 
         <TextBlock
             Grid.Row="1"
