@@ -26,6 +26,11 @@
                     Tag="Articles"
                     Content="Artikelverwaltung"
                 />
+                <!--Temporary dummy DB page-->
+                <NavigationViewItem
+                    Tag="DummyDBForm"
+                    Content="Dummy Database"
+                />
             </NavigationView.MenuItems>
             <Frame x:Name="contentFrame"/>
         </NavigationView>
